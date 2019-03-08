@@ -1,32 +1,24 @@
-# Wownero Funding System
+# Aluisyo Funding System
 
-![whoop](https://i.imgur.com/xVS3UGq.png)
+The main aim of the Aluisyo Funding System is to enable community members to complete projects and be paid for the projects by other community members.
 
-A simple Flask application for managing donations.
-
-Example
--------
-
-[https://funding.wownero.com](https://funding.wownero.com)
 
 ## Installation
 
-Good luck with trying to get this to run! Some pointers:
-
 #### Daemon
 
-First make sure the daemon is up.
+Make sure the daemon is up.
 
 ```bash
-./wownerod --max-concurrency 4
+./aluisyod
 ```
 
 #### Wallet RPC
 
-Expose wallet via RPC.
+Expose walletd via RPC.
 
 ```bash
-./wownero-wallet-rpc --rpc-bind-port 45678 --disable-rpc-login --wallet-file wfs --password ""
+./walletd --rpc-bind-port 19000 --disable-rpc-login --wallet-file afs --password ""
 ```
 
 
@@ -36,8 +28,8 @@ Download application and configure.
 
 ```
 sudo apt install libjpeg-dev libpng-dev python-virtualenv python3 redis-server postgresql-server postgresql-server-dev-*
-git clone https://github.com/skftn/wownero-wfs.git
-cd wownero-wfs
+git clone https://github.com/aluisyonetwork/aluisyo-funding-system.git
+cd aluisyo-funding-systemwownero-wfs
 virtualenv -p /usr/bin/python3
 source venv/bin/activate
 pip uninstall pillow
@@ -59,10 +51,6 @@ Beware `run_dev.py` is meant as a development server.
 
 When running behind nginx/apache, inject `X-Forwarded-For`.
 
-### Contributors
-
-- [camthegeek](https://github.com/camthegeek)
-
 ### License
 
-© 2018 WTFPL – Do What the Fuck You Want to Public License
+© 2019 WTFPL – Do What the Fuck You Want to Public License
