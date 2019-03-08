@@ -29,7 +29,7 @@ Download application and configure.
 ```
 sudo apt install libjpeg-dev libpng-dev python-virtualenv python3 redis-server postgresql-server postgresql-server-dev-*
 git clone https://github.com/aluisyonetwork/aluisyo-funding-system.git
-cd aluisyo-funding-systemwownero-wfs
+cd aluisyo-funding-system
 virtualenv -p /usr/bin/python3
 source venv/bin/activate
 pip uninstall pillow
